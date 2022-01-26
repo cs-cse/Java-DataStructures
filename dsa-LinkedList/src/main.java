@@ -7,8 +7,9 @@ public class main {
         newList.showList();
         newList.addLast(22);
         newList.showList();
-        newList.addElement(2,23);
+        newList.addElement(20,1);
         newList.showList();
-
+        newList.delFirst();
+        newList.showList();
     }
 }

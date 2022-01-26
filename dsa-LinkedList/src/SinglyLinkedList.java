@@ -12,7 +12,7 @@ public class SinglyLinkedList {
         }
     }
     public void showList(){
-//        method to show the elements of singly LinkedList
+//        method to show the elements of singly Linked List
         ListNode current=head;
         while(current!=null){
             System.out.print(current.data+" -> ");
@@ -21,29 +21,25 @@ public class SinglyLinkedList {
         System.out.println("null");
     }
     public int  getLength(){
-        //        method to show the length of a singly LinkedList
+        //        method to show the length of a singly Linked List
         int count=0;
         ListNode temp=head;
         while(temp!=null){
             count++;
             temp=temp.next;
         }
-
         return count;
     }
     public void addFirst(int data){
-        //        method to add the element at the beginning of a singly LinkedList
+        //        method to add the element at the beginning of a singly Linked List
         ListNode temp=new ListNode(data);
-
-
         temp.next=head;
         head=temp;
-
         System.out.println(temp.data+" added in beginning ");
 
     }
     public void addLast(int data){
-        //        method to add  element at the end of singly LinkedList
+        //        method to add  element at the end of singly Linked List
         ListNode temp=new ListNode(data);
         if(head==null){
             head=temp;
@@ -56,23 +52,34 @@ public class SinglyLinkedList {
         current.next=temp;
 
     }
-    public void addElement(int position,int data){
+    public void addElement(int data,int position){
+//        method to add element at any given position in a singly Linked list
         ListNode temp=new ListNode(data);
-        int count=1;
         if(position==1){
             temp.next=head;
             head=temp;
         }
-        ListNode current=head;
-        while(count<position-1){
-            count++;
-            current=current.next;
+        else{
+            ListNode previous=head;
+            int count=1;
 
+            while(count<position-1){
+                previous=previous.next;
+                count++;
+            }
+            ListNode current=previous.next;
+            temp.next=current;
+            previous.next=temp;
         }
-
-        current.next=temp;
-        temp.next=current.next.next;
-
+    }
+    public void delFirst(){
+//        method to delete the first element of a singly Linked list
+        if (head==null){
+            return ;
+        }
+        ListNode temp=head;
+        head=head.next;
+        temp.next=null;
     }
 
 
