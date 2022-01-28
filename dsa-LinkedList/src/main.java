@@ -3,7 +3,8 @@ public class main {
 
         SinglyLinkedList newList=new SinglyLinkedList();
         newList.showList();
-        System.out.println("The length of Linked list is : "+newList.getLength());
+        System.out.println("The length of Linked list is : "+ newList.getLength());
+        newList.addFirst(20);
         newList.addFirst(21);
         newList.addFirst(22);
         newList.addFirst(23);
@@ -13,10 +14,12 @@ public class main {
         newList.delLast();
         newList.delElement(2);
         newList.searchElement(21);
-        newList.addFirst(25);
-        newList.addFirst(26);
-        newList.addFirst(27);
-        newList.revList();
+        newList.showList();
+        newList.midNode();
+        newList.nFromEnd(2);
+        newList.removeDuplicate();
+        newList.showList();
+        newList.detectLoop();
 
 
     }

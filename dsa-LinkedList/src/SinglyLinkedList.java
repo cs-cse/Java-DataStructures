@@ -30,6 +30,7 @@ public class SinglyLinkedList {
         }
         return count;
     }
+
     public void addFirst(int data){
 //  method to add the element at the beginning of a singly Linked List
         ListNode temp=new ListNode(data);
@@ -84,6 +85,7 @@ public class SinglyLinkedList {
         temp.next=null;
         System.out.println(temp.data +" deleted !!");
     }
+
     public void delLast(){
 //  method to delete the last element of a singly Linked list
         if(head==null || head.next==null){
@@ -152,6 +154,83 @@ public class SinglyLinkedList {
         }
         System.out.println("Reversed !!");
 
+    }
+
+    public void midNode(){
+//  method to find the middle node of a singly Linked list.
+        if(head==null){
+            return;
+        }
+        ListNode slowPtr=head;
+        ListNode fastPtr=head;
+        while(fastPtr!=null && fastPtr.next!=null){
+            slowPtr=slowPtr.next;
+            fastPtr=fastPtr.next.next;
+        }
+        System.out.println("Middle element is "+slowPtr.data);
+
+    }
+    public void nFromEnd(int position){
+//  method to find the nth node from the end in a singly Linked list.
+        ListNode mainPtr=head;
+        ListNode refPtr=head;
+        int count=0;
+        while(count<position){
+            refPtr=refPtr.next;
+            count++;
+        }
+        while(refPtr!=null){
+            refPtr=refPtr.next;
+            mainPtr=mainPtr.next;
+
+        }
+        System.out.println("Element at "+position+" position from end is "+mainPtr.data);
+    }
+    public void removeDuplicate(){
+//  method to remove duplicate elements from a given singly Linked list.
+        ListNode current=head;
+        while (current != null && current.next!=null ) {
+            if(current.data==current.next.data){
+                current.next=current.next.next;
+            }
+            else{
+                current=current.next;
+            }
+            
+        }
+    }
+    public void insertInSortedList(int data){
+//  method to add elements in a sorted singly Linked list.
+        ListNode node=new ListNode(data);
+        if(head==null){
+            return;
+        }
+        ListNode temp=null;
+        ListNode current=head;
+        while(current!=null && current.data<node.data){
+            temp=current;
+            current=current.next;
+        }
+        node.next=current;
+        temp.next=node;
+        System.out.println(data+" added.");
+    }
+    public void detectLoop(){
+//  method to detect loop in  a given singly Linked list.
+        if (head==null){
+            return;
+        }
+        ListNode slowPtr=head;
+        ListNode fastPtr=head;
+        while(fastPtr!=null && fastPtr.next!=null){
+            fastPtr=fastPtr.next.next;
+            slowPtr=slowPtr.next;
+            if(slowPtr==fastPtr){
+                System.out.println("Loop detected !!");
+                return;
+            }
+        }
+        System.out.println("No loop detected.");
     }
 
 
