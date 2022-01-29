@@ -2,9 +2,9 @@
 //representation of a singly linked list.
 public class SinglyLinkedList {
     private static ListNode head;
-    private static class ListNode{
-       private int  data;
-        private ListNode next;
+    static class ListNode{
+       final int  data;
+        ListNode next;
 
         public ListNode(int data) {
             this.data = data;
@@ -231,6 +231,82 @@ public class SinglyLinkedList {
             }
         }
         System.out.println("No loop detected.");
+    }
+
+    public ListNode startLoop(){
+//  method to find the node from which loop originates in a singly Linked list.
+        if (head==null){
+            return head;
+        }
+        ListNode slowPtr=head;
+        ListNode fastPtr=head;
+        while(fastPtr!=null && fastPtr.next!=null){
+            fastPtr=fastPtr.next.next;
+            slowPtr=slowPtr.next;
+            if(slowPtr==fastPtr){
+              return getFirstNode(slowPtr);
+            }
+        }
+        return null;
+    }
+    public ListNode getFirstNode(ListNode slowPtr){
+        ListNode current=head;
+        while(slowPtr!=current){
+            current=current.next;
+            slowPtr=slowPtr.next;
+        }
+        return current;
+
+    }
+    public void removeLoop(){
+//  method to find the node from which loop originates in a singly Linked list.
+        if (head==null){
+            return ;
+        }
+        ListNode slowPtr=head;
+        ListNode fastPtr=head;
+        while(fastPtr!=null && fastPtr.next!=null){
+            fastPtr=fastPtr.next.next;
+            slowPtr=slowPtr.next;
+            if(slowPtr==fastPtr){
+                 removeLoops(slowPtr);
+                 return;
+            }
+        }
+
+    }
+    public void removeLoops(ListNode slowPtr){
+        ListNode current=head;
+
+        while(current.next!=slowPtr.next){
+            current=current.next;
+            slowPtr=slowPtr.next;
+        }
+        slowPtr.next=null;
+    }
+    public static ListNode merge(ListNode a,ListNode b){
+//  method tp merge two sorted singly Linked list.
+        ListNode dummy=new ListNode(0);
+        ListNode tail=dummy;
+        while(a!=null && b!=null){
+            if(a.data<=b.data){
+                tail.next=a;
+                a=a.next;
+            }
+            else{
+                tail.next=b;
+                b=b.next;
+            }
+            tail=tail.next;
+            if(a==null){
+                tail.next=b;
+            }
+            else{
+                tail.next=a;
+            }
+
+        }
+        return dummy.next;
     }
 
 
