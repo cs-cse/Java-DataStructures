@@ -35,46 +35,8 @@ public class LeetCode_MergeSortedLists {
         }
         return dummy.next;
     }
-    public static void showLists(){
-//  method to show the elements of singly Linked List
-        ListNodes current=head;
-        while(current!=null){
-            System.out.print(current.data+" -> ");
-            current=current.next;
-        }
-        System.out.println("null");
-    }
-    public static void addLast(int data){
-//  method to add  element at the end of singly Linked List
-        ListNodes temp=new ListNodes(data);
-        if(head==null){
-            head=temp;
-            return;
-        }
-        ListNodes current=head;
-        while(current.next!=null){
-            current=current.next;
-        }
-        current.next=temp;
-        System.out.println(temp.data +" added at the end of Linked list.");
 
-    }
-    public static void main(String[] args) {
-        LeetCode_MergeSortedLists ll=new LeetCode_MergeSortedLists();
-        ll.addLast(1);
-        ll.addLast(4);
-        ll.addLast(8);
 
-        LeetCode_MergeSortedLists ll2=new LeetCode_MergeSortedLists();
-        ll2.addLast(3);
-        ll2.addLast(5);
-        ll2.addLast(7);
-        ll2.addLast(17);
-
-        ll.showLists();
-        ll2.showLists();
-
-    }
 
 
 

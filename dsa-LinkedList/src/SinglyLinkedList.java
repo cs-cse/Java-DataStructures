@@ -1,8 +1,10 @@
-
 //representation of a singly linked list.
 public class SinglyLinkedList {
     private static ListNode head;
-    static class ListNode{
+    public int data;
+    public SinglyLinkedList next;
+
+    public static class ListNode{
        final int  data;
         ListNode next;
 
@@ -309,6 +311,30 @@ public class SinglyLinkedList {
         return dummy.next;
     }
 
+    public ListNode addLists(ListNode a, ListNode b){
+//  method to get the sum of two singly Linked list.
+        ListNode dummy=new ListNode(0);
+        ListNode tail=dummy;
+        int carry=0;
+        while(a!=null || b!=null) {
+            int x = (a != null) ? a.data : 0;
+            int y = (b != null) ? b.data : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            tail.next = new ListNode(sum % 10);
+            tail = tail.next;
+            if (a != null) {
+                a = a.next;
+            }
+            if (b != null) {
+                b = b.next;
+            }
+        }
+            if(carry>0){
+                tail.next=new ListNode(carry);
+            }
+            return dummy.next;
+    }
 
 
 
