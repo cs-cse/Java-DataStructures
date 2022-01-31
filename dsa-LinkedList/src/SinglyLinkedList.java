@@ -310,7 +310,6 @@ public class SinglyLinkedList {
         }
         return dummy.next;
     }
-
     public ListNode addLists(ListNode a, ListNode b){
 //  method to get the sum of two singly Linked list.
         ListNode dummy=new ListNode(0);
