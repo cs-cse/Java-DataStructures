@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class DoublyLinkedList {
     private ListNodeDouble head;
     private ListNodeDouble tail;
@@ -68,17 +70,43 @@ public class DoublyLinkedList {
 
     }
     public void delFirst(){
+//  method to delete the elements of a doubly Linked list from the beginning.
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+        ListNodeDouble temp=head;
         if(head==tail){
             tail=null;
         }
         else{
             head.previous.next=null;
-
         }
-        ListNodeDouble temp=head;
         head=head.next;
         temp.next=null;
+        length++;
+
     }
+
+    public void delLast(){
+//  method to delete the elements of a doubly Linked list from the end.
+    if(isEmpty()){
+        throw new NoSuchElementException();
+    }
+    ListNodeDouble temp=tail;
+    if(head==tail){
+        head=null;
+    }
+    else {
+        tail.previous.next=null;
+    }
+    tail=tail.previous;
+    temp.previous=null;
+    length--;
+
+
+    }
+
+
 
 }
 
