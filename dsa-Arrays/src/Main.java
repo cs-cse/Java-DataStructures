@@ -97,6 +97,45 @@ public class Main {
         System.out.println();
 
     }
+    public static int [] resize(int []a,int capacity){
+//  method to resize an existing array to accommodate more elements.
+        int[]temp=new int[capacity];
+        for(int i=0;i<a.length;i++){
+            temp[i]=a[i];
+        }
+
+        return temp;
+
+    }
+    public static int findMissingNumber(int[]a){
+//        important !!
+//  method to find the missing number from a given range in an array.
+        int n=a.length+1;
+        int naturalSum=(n*(n+1))/2;
+        for(int ele:a){
+            naturalSum=naturalSum-ele;
+        }
+       return naturalSum;
+
+    }
+    public static boolean palindrome(String a){
+//  method to check if the String is palindrome or not.
+        char[]word=a.toCharArray();
+        int end=a.length()-1;
+        int start=0;
+        while(start<end){
+            if(word[start]!=word[end]){
+                return false;
+            }
+            start++;
+            end--;
+        }
+
+
+
+    return true;
+    }
+
 
     public static void main(String[] args) {
         int [] myArray=new int[15];
@@ -107,6 +146,11 @@ public class Main {
         minElement(myArray);
         secondMax(myArray);
         removeEven(myArray);
-
+        resize(myArray,20);
+        int []temp={1,2,3,5};
+        System.out.println();
+       int check= findMissingNumber(temp);
+        System.out.println(check);
+        System.out.println(palindrome("madam"));
     }
 }
