@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Java-DataStructures.iml" filepath="$PROJECT_DIR$/Java-DataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Arrays/dsa-Arrays.iml" filepath="$PROJECT_DIR$/dsa-Arrays/dsa-Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" filepath="$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" filepath="$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" />
     </modules>
   </component>
 </project>
