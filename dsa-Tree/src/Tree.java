@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import java.util.Stack;
-=======
 
->>>>>>> origin/master
 
 public class Tree {
 
@@ -34,18 +31,14 @@ public class Tree {
         second.right=fifth;
 
     }
-<<<<<<< HEAD
+
     public void preOrderR(TreeNode root){
 //  recursive method to preOrder traverse a binary tree.
-=======
-    public void preOrder(TreeNode root){
-//  method to preOrder traverse a binary tree.
->>>>>>> origin/master
         if(root==null){
             return;
         }
         System.out.println(root.data);
-<<<<<<< HEAD
+
         preOrderR(root.left);
         preOrderR(root.right);
     }
@@ -66,10 +59,9 @@ public class Tree {
                 stack.push(temp.left);
             }
         }
-=======
-        preOrder(root.left);
-        preOrder(root.right);
->>>>>>> origin/master
+
+
+
     }
 
     public static void main(String[] args) {
