@@ -1,4 +1,4 @@
-
+import java.util.Stack;
 
 public class Tree {
 
@@ -30,14 +30,32 @@ public class Tree {
         second.right=fifth;
 
     }
-    public void preOrder(TreeNode root){
-//  method to preOrder traverse a binary tree.
+    public void preOrderR(TreeNode root){
+//  recursive method to preOrder traverse a binary tree.
         if(root==null){
             return;
         }
         System.out.println(root.data);
-        preOrder(root.left);
-        preOrder(root.right);
+        preOrderR(root.left);
+        preOrderR(root.right);
+    }
+    public void preOrderI(){
+//  iterative method to preOrder traverse a binary tree.
+        if(root==null){
+            return;
+        }
+        Stack<TreeNode> stack=new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode temp=stack.pop();
+            System.out.println(temp.data);
+            if(temp.right!=null){
+                stack.push(temp.right);
+            }
+            if(temp.left!=null){
+                stack.push(temp.left);
+            }
+        }
     }
 
     public static void main(String[] args) {
