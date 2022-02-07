@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 
-public class Tree {
+public class BinaryTree {
 
     private TreeNode root;
     private class TreeNode{

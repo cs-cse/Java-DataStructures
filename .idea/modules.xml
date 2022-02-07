@@ -4,10 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Java-DataStructures.iml" filepath="$PROJECT_DIR$/Java-DataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Arrays/dsa-Arrays.iml" filepath="$PROJECT_DIR$/dsa-Arrays/dsa-Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-BinaryTree/dsa-BinaryTree.iml" filepath="$PROJECT_DIR$/dsa-BinaryTree/dsa-BinaryTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" filepath="$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Queues/dsa-Queues.iml" filepath="$PROJECT_DIR$/dsa-Queues/dsa-Queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" filepath="$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dsa-Tree/dsa-Tree.iml" filepath="$PROJECT_DIR$/dsa-Tree/dsa-Tree.iml" />
     </modules>
   </component>
 </project>
