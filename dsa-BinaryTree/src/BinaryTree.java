@@ -1,6 +1,5 @@
 import java.util.Stack;
 
-
 public class BinaryTree {
 
     private TreeNode root;
@@ -11,8 +10,6 @@ public class BinaryTree {
 
         public TreeNode(int data) {
             this.data = data;
-            this.left=null;
-            this.right=null;
         }
     }
 
@@ -31,9 +28,8 @@ public class BinaryTree {
         second.right=fifth;
 
     }
-
     public void preOrderR(TreeNode root){
-//  recursive method to preOrder traverse a binary tree.
+//  recursive method to preOrder traverse a binary tree.(Node->Left->Right)
         if(root==null){
             return;
         }
@@ -42,8 +38,8 @@ public class BinaryTree {
         preOrderR(root.left);
         preOrderR(root.right);
     }
-    public void preOrderI(){
-//  iterative method to preOrder traverse a binary tree.
+    public void preOrderI(TreeNode root){
+//  iterative method to preOrder traverse a binary tree.(Node->Left->Right)
         if(root==null){
             return;
         }
@@ -61,6 +57,49 @@ public class BinaryTree {
         }
 
 
+
+    }
+
+    public void inOrderR(TreeNode root){
+//  recursive method to inOrder traverse a binary tree.(Left->Node->Right)
+        if(root==null){
+            return;
+        }
+        inOrderR(root.left);
+        System.out.println(root.data);
+        inOrderR(root.right);
+
+    }
+    public void inOrderI(TreeNode root){
+//  iterative method to inOrder traverse a binary tree.(Left->Node->Right)
+        if (root==null){
+            return;
+        }
+        Stack<TreeNode> stack=new Stack<>();
+        TreeNode temp=root;
+        while (!stack.isEmpty() ||temp!=null ){
+            if(temp!=null){
+                stack.push(temp);
+                temp=temp.left;
+
+            }
+            else{
+                temp=stack.pop();
+                System.out.println(temp.data+" ");
+                temp=temp.right;
+            }
+
+        }
+
+    }
+    public void postOrderR(TreeNode root){
+//  recursive method to postOrder traverse a binary tree.(Left->Right->Node)
+        if(root==null){
+            return;
+        }
+        preOrderR(root.left);
+        preOrderR(root.right);
+        System.out.println(root.data);
 
     }
 
