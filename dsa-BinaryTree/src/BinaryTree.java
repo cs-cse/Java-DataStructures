@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinaryTree {
@@ -33,12 +35,12 @@ public class BinaryTree {
         if(root==null){
             return;
         }
-        System.out.println(root.data);
+        System.out.print(root.data+" ");
 
         preOrderR(root.left);
         preOrderR(root.right);
     }
-    public void preOrderI(TreeNode root){
+    public void preOrderI(){
 //  iterative method to preOrder traverse a binary tree.(Node->Left->Right)
         if(root==null){
             return;
@@ -70,7 +72,7 @@ public class BinaryTree {
         inOrderR(root.right);
 
     }
-    public void inOrderI(TreeNode root){
+    public void inOrderI(){
 //  iterative method to inOrder traverse a binary tree.(Left->Node->Right)
         if (root==null){
             return;
@@ -99,14 +101,80 @@ public class BinaryTree {
         }
         preOrderR(root.left);
         preOrderR(root.right);
-        System.out.println(root.data);
+        System.out.print(root.data);
+        System.out.println();
 
     }
+
+    public void postOrderI(){
+//  iterative method to postOrder traverse a binary tree.(Left->Right->Node)
+
+        TreeNode current=root;
+        Stack<TreeNode> stack=new Stack<>();
+        while(current!=null || !stack.isEmpty()){
+            if (current!=null){
+                stack.push(current);
+                current=current.left;
+            }
+            else{
+                TreeNode temp=stack.peek().right;
+                if (temp==null){
+                    temp=stack.pop();
+                    System.out.println(temp.data+" ");
+                    while (!stack.isEmpty() && temp==stack.peek().right){
+                        temp=stack.pop();
+                        System.out.println(temp.data+" ");
+                    }
+
+                }
+                else {
+                    current=temp;
+                }
+            }
+        }
+
+    }
+    public void levelOrderTraversal(){
+//  method to traverse nodes in each level of the binary tree(Level 1->Level 2->Level 3->.......->Level n)
+        if (root==null){
+            return;
+        }
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            TreeNode temp=queue.poll();
+            System.out.print(temp.data+" ");
+            if(temp.left!=null){
+                queue.offer(temp.left);
+            }
+            if(temp.right!=null){
+                queue.offer(temp.right);
+            }
+        }
+    }
+    public int  findMax(TreeNode root){
+//  method to find the maximum value in a binary tree
+        if (root==null){
+            return Integer.MIN_VALUE;
+        }
+        int result=root.data;
+        int left=findMax(root.left);
+        int right=findMax(root.right);
+        if(left>result){
+            result=left;
+        }
+        if (right>result){
+            result=right;
+        }
+        return result;
+    }
+
 
     public static void main(String[] args) {
         BinaryTree bt=new BinaryTree();
         bt.createBinaryTree();
         bt.postOrderR(bt.root);
+        bt.levelOrderTraversal();
 
     }
 }
