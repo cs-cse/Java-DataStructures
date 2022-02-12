@@ -29,7 +29,14 @@ public class MaxPriorityQueue {
             k=k/2;
         }
     }
-public void resize(int k){
+public void resize(int capacity){
+//  method to resize the array to increase the capacity of the heap
+        Integer[]temp=new Integer[capacity];
+        for(int i=0;i<heap.length;i++){
+            temp[i]=heap[i];
+        }
+        heap=temp;
+
 
 }
     public static void main(String[] args) {
