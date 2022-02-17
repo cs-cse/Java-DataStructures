@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class AdjListGraph {
 //  Undirected graph implementation using list.
@@ -43,10 +44,29 @@ private LinkedList<Integer>[ ] adj;
         while (!q.isEmpty()){
             int u=q.poll();
             System.out.print(u+" ");
+
             for(int v:adj[u]){
                 if(!visited[v]){
                     visited[v]=true;
                     q.offer(v);
+                }
+            }
+        }
+        System.out.println();
+    }
+    public void dfs(int s){
+        boolean[]visited=new boolean[V];
+        Stack<Integer>stack=new Stack<>();
+        stack.push(s);
+        while (!stack.isEmpty()){
+            int u=stack.pop();
+            if(!visited[u]){
+                visited[u]=true;
+                System.out.print(u+" ");
+                for (int v:adj[u]){
+                    if (!visited[v]){
+                        stack.push(v);
+                    }
                 }
             }
         }
@@ -60,6 +80,7 @@ private LinkedList<Integer>[ ] adj;
         g.addEdge(3, 0);
         // 4
         g.bfs(0);
+        g.dfs(0);
 
 
     }
