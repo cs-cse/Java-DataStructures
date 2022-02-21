@@ -69,7 +69,9 @@ public class HashTable {
     public static void main(String[] args) {
         HashTable ht=new HashTable(10);
         ht.put(1,"Hello");
-        System.out.println(ht.size());
+        ht.put(2,"Hii");
+        ht.put(3,"Bye");
+        ht.put(4,"Byeeee");
         System.out.println(ht.get(1));
     }
 }
