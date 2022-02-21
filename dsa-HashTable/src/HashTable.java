@@ -23,6 +23,7 @@ public class HashTable {
     public boolean isEmpty(){
         return size==0;
     }
+
     public void put(Integer key,String value){
         if(key==null || value==null){
             throw new IllegalArgumentException("Null value detected");
@@ -44,6 +45,9 @@ public class HashTable {
 
     }
     public String get(Integer key){
+        if(key==null){
+            throw new IllegalArgumentException("Null value detected");
+        }
         int bucketIndex=getBucketIndex(key);
         HashNode head=buckets[bucketIndex];
         while (head!=null){
@@ -57,6 +61,7 @@ public class HashTable {
     public String remove(Integer key){
         return null;
     }
+
     public int getBucketIndex(int key){
         return key%numOfBuckets;
     }
