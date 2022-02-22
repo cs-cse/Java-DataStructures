@@ -59,7 +59,30 @@ public class HashTable {
         return null;
     }
     public String remove(Integer key){
-        return null;
+        if(key==null){
+            throw new IllegalArgumentException("Null value detected !!");
+        }
+        int bucketIndex=getBucketIndex(key);
+        HashNode head=buckets[bucketIndex];
+        HashNode previous=null;
+        while(head!=null){
+            if(head.key.equals(key)){
+                break;
+            }
+            previous=head;
+            head=head.next;
+        }
+        if(head==null){
+            return null;
+        }
+        size--;
+        if(previous!=null){
+            previous.next=head.next;
+        }
+        else{
+            buckets[bucketIndex]=head.next;
+        }
+        return head.value;
     }
 
     public int getBucketIndex(int key){
@@ -73,5 +96,6 @@ public class HashTable {
         ht.put(3,"Bye");
         ht.put(4,"Byeeee");
         System.out.println(ht.get(1));
+        System.out.println(ht.remove(1));
     }
 }
