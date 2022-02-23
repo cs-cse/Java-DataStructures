@@ -103,4 +103,4 @@ A data structure is a particular way of organizing and storing data in a compute
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
 
-### ⚡ [Continue here for Algorithms...](https://github.com/cs-cse/Java-Algorithms)
+### ⚡ [Continue to Algorithms...](https://github.com/cs-cse/Java-Algorithms)
