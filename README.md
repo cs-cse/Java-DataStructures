@@ -88,7 +88,7 @@ A data structure is a particular way of organizing and storing data in a compute
 * A node's position in the tree defines the key with which that node is associated, which makes tries different in comparison to binary search trees, in which a node stores a key that corresponds only to that node.All descendants of a node have a common prefix of a String associated with that node, whereas the root is associated with an empty String.
 
 
-### Data Structure Operations Complexity
+### ✅ Data Structure Operations Complexity
 
 | Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
@@ -103,4 +103,4 @@ A data structure is a particular way of organizing and storing data in a compute
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
 
-### [Continue here for Algorithms...](https://github.com/cs-cse/Java-Algorithms)
+### ⚡ [Continue here for Algorithms...](https://github.com/cs-cse/Java-Algorithms)
