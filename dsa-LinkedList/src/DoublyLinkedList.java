@@ -86,7 +86,6 @@ public class DoublyLinkedList {
         length++;
 
     }
-
     public void delLast(){
 //  method to delete the elements of a doubly Linked list from the end.
     if(isEmpty()){
