@@ -78,6 +78,7 @@ public class MaxPriorityQueue {
         pq.insert(6);
         pq.insert(1);
         pq.insert(3);
+        pq.insert(7);
         System.out.println(pq.size());
 
 
