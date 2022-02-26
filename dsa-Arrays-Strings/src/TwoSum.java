@@ -59,6 +59,7 @@ public class TwoSum {
 
         for(int d:c2){
             System.out.print(d+" ");
+            System.out.println("3");
         }
 
 
