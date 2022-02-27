@@ -2,6 +2,21 @@
 
 A data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.This repository contains **Java** based solutions to many popular data structures from coding interviews pov.
 
+### ✅ Data Structure Operations Complexity
+
+| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
+| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
+| **Array**               | 1         | n         | n         | n         |           |
+| **Stack**               | n         | n         | 1         | 1         |           |
+| **Queue**               | n         | n         | 1         | 1         |           |
+| **Linked List**         | n         | n         | 1         | n         |           |
+| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
+| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
+| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
+
 ### 🗃️ [Arrays](https://github.com/cs-cse/Java-DataStructures/tree/master/dsa-Arrays-Strings/src)
 * An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. 
 * For simplicity, we can think of an array as a fleet of stairs where on each step is placed a value (let’s say one of your friends). Here, you can identify the location of any of your friends by simply knowing the count of the step they are on. 
@@ -88,19 +103,6 @@ A data structure is a particular way of organizing and storing data in a compute
 * A node's position in the tree defines the key with which that node is associated, which makes tries different in comparison to binary search trees, in which a node stores a key that corresponds only to that node.All descendants of a node have a common prefix of a String associated with that node, whereas the root is associated with an empty String.
 
 
-### ✅ Data Structure Operations Complexity
 
-| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Array**               | 1         | n         | n         | n         |           |
-| **Stack**               | n         | n         | 1         | 1         |           |
-| **Queue**               | n         | n         | 1         | 1         |           |
-| **Linked List**         | n         | n         | 1         | n         |           |
-| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
-| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
 
 ### ⚡ [Continue to Algorithms...](https://github.com/cs-cse/Java-Algorithms)
