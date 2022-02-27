@@ -6,12 +6,12 @@
       <module fileurl="file://$PROJECT_DIR$/dsa-Arrays-Strings/Matrix.iml" filepath="$PROJECT_DIR$/dsa-Arrays-Strings/Matrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-BinaryTree/dsa-BinaryTree.iml" filepath="$PROJECT_DIR$/dsa-BinaryTree/dsa-BinaryTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Graph/dsa-Graph.iml" filepath="$PROJECT_DIR$/dsa-Graph/dsa-Graph.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dsa-HashTable/dsa-HashTable.iml" filepath="$PROJECT_DIR$/dsa-HashTable/dsa-HashTable.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Heap/dsa-Heap.iml" filepath="$PROJECT_DIR$/dsa-Heap/dsa-Heap.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" filepath="$PROJECT_DIR$/dsa-LinkedList/dsa-LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Queues/dsa-Queues.iml" filepath="$PROJECT_DIR$/dsa-Queues/dsa-Queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" filepath="$PROJECT_DIR$/dsa-Stacks/dsa-Stacks.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-Trie/dsa-Trie.iml" filepath="$PROJECT_DIR$/dsa-Trie/dsa-Trie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-HashSet/map-set.iml" filepath="$PROJECT_DIR$/dsa-HashSet/map-set.iml" />
     </modules>
   </component>
 </project>
