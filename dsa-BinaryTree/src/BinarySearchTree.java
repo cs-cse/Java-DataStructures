@@ -58,9 +58,9 @@ public class BinarySearchTree {
     public static void main(String[] args) {
             BinarySearchTree bst=new BinarySearchTree();
             bst.insert(bst.root, 14);
-        bst.insert(bst.root, 24);
-        bst.insert(bst.root, 34);
-        bst.insert(bst.root, 44);
+            bst.insert(bst.root, 24);
+            bst.insert(bst.root, 34);
+            bst.insert(bst.root, 44);
 
     }
 }
