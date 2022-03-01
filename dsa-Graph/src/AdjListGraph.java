@@ -37,6 +37,7 @@ private LinkedList<Integer>[ ] adj;
         return sb.toString();
     }
     public void bfs(int s){
+//  an algorithm for searching a tree data structure for a node that satisfies a given property
         boolean[]visited=new boolean[V];
         Queue<Integer>q=new LinkedList<>();
         visited[s]=true;
@@ -55,6 +56,7 @@ private LinkedList<Integer>[ ] adj;
         System.out.println();
     }
     public void dfs(int s){
+//  used in topological sorting, scheduling problems, cycle detection
         boolean[]visited=new boolean[V];
         Stack<Integer>stack=new Stack<>();
         stack.push(s);
